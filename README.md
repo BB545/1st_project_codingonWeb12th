@@ -10,6 +10,7 @@
 - [개발 인원] : 총 3인
 - [팀명] : 스틸스
 - [개발 환경] :
+  |||
   |---|---|
   |개발 언어|HTML, CSS, JavaScript|
   |Tools|Figma, notion, vscode|
