@@ -6,8 +6,69 @@
     <title>Document</title>
   </head>
   <body>
-    <svg class="icon">
-      <use xlink:href="./images/sprite.svg#cart-check-fill"></use>
-    </svg>
+    <section id="item-slider">
+      <div class="slider__wrap">
+        <div class="slider__img">
+          <div class="slider__inner">
+            <div class="slider">
+              <img src="item_jpgs\item1.jpg" alt="img1" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item2.jpg" alt="img2" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item3.jpg" alt="img3" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item4.jpg" alt="img3" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item5.jpg" alt="img5" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item6.jpg" alt="img6" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item7.jpg" alt="img7" />
+            </div>
+            <div class="slider">
+              <img src="item_jpgs\item8.jpg" alt="img8" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const sliderWrap = document.querySelector(".slider__wrap");
+      const sliderImg = document.querySelector(".slider__img"); // 보여지는 영역
+      const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
+      const slider = document.querySelectorAll(".slider"); // 각각의 이미지
+
+      let currentIndex = 0; // 현재 보이는 이미지
+      let sliderCount = slider.length; // 이미지 갯수
+      let sliderWidth = sliderImg.offsetWidth; // 이미지 가로값
+      let sliderClone = sliderInner.firstElementChild.cloneNode(true); // 첫번째 이미지 복사
+      sliderInner.appendChild(sliderClone); // 첫번째 이미지를 마지막에 넣어줌
+
+      function sliderEffect() {
+        currentIndex++;
+        sliderInner.style.transition = "all 0.6s";
+
+        sliderInner.style.transform =
+          "translateX(-" + sliderWidth * currentIndex + "px)";
+
+        // 마지막 사진에 위치했을 때
+        if (currentIndex == sliderCount) {
+          setTimeout(() => {
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = "translateX(0px)";
+          }, 700);
+
+          currentIndex = 0;
+        }
+      }
+      setInterval(sliderEffect, 2000);
+    </script>
   </body>
 </html>

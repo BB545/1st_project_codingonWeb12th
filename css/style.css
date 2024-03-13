@@ -1,0 +1,74 @@
+/* slider */
+.slider__wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 이미지 보이는 부분 */
+.slider__img {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+/* 이미지 감싸고 있는 부모 : 움직이는 부분 */
+.slider__inner {
+  display: flex;
+  flex-wrap: wrap;
+  /* 총 이미지 6개 */
+  width: 4800px;
+  height: 400px;
+}
+/* 개별적인 이미지 */
+.slider {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.slider img {
+  width: 100%;
+}
+.slider::before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 5px 10px;
+}
+.slider:nth-child(1)::before {
+  content: "img1";
+}
+.slider:nth-child(2)::before {
+  content: "img2";
+}
+.slider:nth-child(3)::before {
+  content: "img3";
+}
+.slider:nth-child(4)::before {
+  content: "img4";
+}
+.slider:nth-child(5)::before {
+  content: "img5";
+}
+.slider:nth-child(6)::before {
+  content: "img6";
+}
+.slider:nth-child(7)::before {
+  content: "img7";
+}
+.slider:nth-child(8)::before {
+  content: "img8";
+}
+.slider:nth-child(6)::before {
+  content: "img1";
+}
+
+@media (max-width: 800px) {
+  .slider__img {
+    width: 400px;
+    height: 300px;
+  }
+}
