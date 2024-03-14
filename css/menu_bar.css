@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #c9d6de;
+}
+
+.menu > .sub {
+  width: 200px;
+  height: 0;
+  list-style: none;
+  overflow: hidden;
+  transition: height ease-out 0.5s 0s;
+}
+
+.menu > .sub li {
+  background-color: #c9d6de;
+  border-top: 1px #1e2022 solid;
+}
+
+.menu > .sub li > a {
+  text-decoration: none;
+  color: black;
+}

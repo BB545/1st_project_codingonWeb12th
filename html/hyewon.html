@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/menu_bar.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="menu">
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="15"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </span>
+      <ul class="sub">
+        <li>
+          <a href="#None">nav1</a>
+        </li>
+        <li>
+          <a href="#None">nav2</a>
+        </li>
+        <li>
+          <a href="#None">nav3</a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      const subBar = document.querySelector(".menu>.sub");
+
+      let subToggle = true;
+      function show_sub() {
+        if (subToggle) {
+          subBar.style.height = "120px";
+          subToggle = !subToggle;
+        } else {
+          subBar.style.height = "0px";
+          subToggle = !subToggle;
+        }
+      }
+
+      menu.addEventListener("click", show_sub);
+    </script>
+  </body>
+</html>
