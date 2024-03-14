@@ -5,54 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/menu_bar.css" />
+    <link rel="stylesheet" href="../css/product_popup.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="menu">
-      <span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="15"
-          fill="currentColor"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-          />
-        </svg>
-      </span>
-      <ul class="sub">
-        <li>
-          <a href="#None">nav1</a>
-        </li>
-        <li>
-          <a href="#None">nav2</a>
-        </li>
-        <li>
-          <a href="#None">nav3</a>
-        </li>
-      </ul>
+    <div id="root">
+      <button type="button" id="modal_opne_btn">제품사진 클릭</button>
+    </div>
+
+    <div id="modal">
+      <div class="modal_content">
+        <h2>제품설명</h2>
+        <p>제품설명 창 입니다.</p>
+        <button type="button" id="modal_close_btn">제품설명 창 닫기</button>
+      </div>
+      <div class="modal_layer"></div>
     </div>
     <script>
-      const menu = document.querySelector(".menu");
-      const subBar = document.querySelector(".menu>.sub");
+      document.getElementById("modal_opne_btn").onclick = function () {
+        document.getElementById("modal").style.display = "block";
+      };
 
-      let subToggle = true;
-      function show_sub() {
-        if (subToggle) {
-          subBar.style.height = "120px";
-          subToggle = !subToggle;
-        } else {
-          subBar.style.height = "0px";
-          subToggle = !subToggle;
-        }
-      }
-
-      menu.addEventListener("click", show_sub);
+      document.getElementById("modal_close_btn").onclick = function () {
+        document.getElementById("modal").style.display = "none";
+      };
     </script>
   </body>
 </html>
