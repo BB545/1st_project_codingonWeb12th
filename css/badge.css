@@ -1,0 +1,26 @@
+/* badge */
+
+.badge {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+.bi {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.scroll-side {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(207, 207, 207);
+    opacity: 0.5;
+    position: relative;
+}

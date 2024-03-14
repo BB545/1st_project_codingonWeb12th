@@ -1,0 +1,42 @@
+/* main 브랜딩 이미지 */
+
+.containermain {
+    position: relative;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    animation: main_back 2s 1s forwards;
+}
+
+#main_brand {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    color: white;
+    font-size: 8vw;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+}
+
+#main_explain {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    color: white;
+    font-size: 2vw;
+}
+
+@keyframes main_back {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(0.3);
+    }
+}
