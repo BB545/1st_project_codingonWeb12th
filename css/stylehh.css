@@ -70,13 +70,13 @@
 
 /* 배너 */
 
-body {
+/* body {
     background-attachment: fixed;
     background-image: url(https://cdn.imweb.me/thumbnail/20230126/97f0ad1bebd44.jpg);
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: 50% 50%;
-}
+} */
 
 .banner {
     width: 100%;
