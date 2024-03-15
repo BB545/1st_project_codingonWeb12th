@@ -1,4 +1,4 @@
-
+<!-- CDN이 필요한 컴포넌트라서 코드 전체를 넣어두었습니다. -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -21,20 +21,16 @@
       rel="stylesheet"
       href="http://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="/css/Img_slider.css" />
+    <link rel="stylesheet" href="/css/product_slider.css" />
   </head>
 
   <body>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <img class="swiper-slide" src="/item_jpgs/item1.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item2.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item3.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item4.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item5.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item6.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item7.jpg"></img>
-        <img class="swiper-slide" src="/item_jpgs/item8.jpg"></img>
+        <img class="swiper-slide" src="/product_img/item1_1.jpg"></img>
+        <img class="swiper-slide" src="/product_img/item1_2.jpg"></img>
+        <img class="swiper-slide" src="/product_img/item1_3.jpg"></img>
+        <img class="swiper-slide" src="/product_img/item1_4.jpg"></img>
       </div>
 
       <div class="swiper-pagination"></div>
@@ -49,12 +45,11 @@
 
     <script>
       new Swiper(".swiper", {
-        autoplay: {
-          delay: 2000,
-        },
+        // autoplay: {
+        //   delay: 2000,
+        // },
         loop: true,
-        slidesPerView: 3,
-        spaceBetween: 10,
+        slidesPerView: 1,
         centeredSlides: true,
         pagination: {
           el: ".swiper-pagination",
