@@ -1,34 +1,70 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/product_popup.css" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/css/Img_slider.css" />
   </head>
+
   <body>
-    <div id="root">
-      <button type="button" id="modal_opne_btn">제품사진 클릭</button>
-    </div>
-
-    <div id="modal">
-      <div class="modal_content">
-        <h2>제품설명</h2>
-        <p>제품설명 창 입니다.</p>
-        <button type="button" id="modal_close_btn">제품설명 창 닫기</button>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <img class="swiper-slide" src="/item_jpgs/item1.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item2.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item3.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item4.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item5.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item6.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item7.jpg"></img>
+        <img class="swiper-slide" src="/item_jpgs/item8.jpg"></img>
       </div>
-      <div class="modal_layer"></div>
-    </div>
-    <script>
-      document.getElementById("modal_opne_btn").onclick = function () {
-        document.getElementById("modal").style.display = "block";
-      };
 
-      document.getElementById("modal_close_btn").onclick = function () {
-        document.getElementById("modal").style.display = "none";
-      };
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev">
+        <div class="material-icons"></div>
+      </div>
+      <div class="swiper-button-next">
+        <div class="material-icons"></div>
+      </div>
+    </div>
+
+    <script>
+      new Swiper(".swiper", {
+        autoplay: {
+          delay: 2000,
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+      });
     </script>
   </body>
 </html>
