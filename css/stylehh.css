@@ -6,30 +6,8 @@
 
 #main {
     position: relative;
-    width: 100%;
-    height: auto;
 
     animation: main_back 2s 1s forwards;
-}
-
-#main_brand {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
-    color: white;
-    font-size: 8vw;
-    font-family: "Gasoek One", sans-serif;
-    font-weight: 400;
-}
-
-#main_explain {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -70%);
-    color: white;
-    font-size: 2vw;
 }
 
 @keyframes main_back {
@@ -38,6 +16,62 @@
     }
     100% {
         filter: brightness(0.3);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        width: 100%;
+    }
+
+    #main_brand {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -30%);
+        color: white;
+        font-size: 8vw;
+        font-family: "Gasoek One", sans-serif;
+        font-weight: 400;
+    }
+    
+    #main_explain {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -70%);
+        color: white;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .containermain {
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #main {
+        object-fit: cover;
+    }
+
+    #main_brand {
+        position: absolute;
+        left: 10vw;
+        top: 40%;
+        color: white;
+        font-size: 13vw;
+        font-family: "Gasoek One", sans-serif;
+        font-weight: 400;
+    }
+    
+    #main_explain {
+        position: absolute;
+        width: 50%;
+        left: 10vw;
+        top: 55%;
+        color: white;
+        font-size: 4vw;
     }
 }
 
