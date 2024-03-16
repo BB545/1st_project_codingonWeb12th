@@ -1,6 +1,18 @@
+.swiper-back {
+  background-color: #C9D6DE;
+}
+
+.swiper-name {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Gasoek One", sans-serif;
+  font-weight: 400;
+}
+
 .swiper {
-  width: 630px;
-  height: 200px;
+  width: 100%;
   position: relative;
 }
 

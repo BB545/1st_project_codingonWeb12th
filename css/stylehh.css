@@ -8,7 +8,6 @@
 }
 .main_content {
     position: relative;
-    margin-top: 20px;
     text-align: left;
     color: white;
 
@@ -58,6 +57,7 @@
     }
     #main_explain {
         font-size: 2vw; 
+        padding-top: 30px;
     }
 }
 
@@ -75,6 +75,7 @@
     }
     #main_explain {
         font-size: 3vw;
+        padding-top: 30px;
     }
 }
 
@@ -107,13 +108,13 @@
 
 /* 배너 */
 
-/* body {
+body {
     background-attachment: fixed;
     background-image: url(https://cdn.imweb.me/thumbnail/20230126/97f0ad1bebd44.jpg);
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: 50% 50%;
-} */
+}
 
 .banner {
     width: 100%;
@@ -137,97 +138,20 @@
 
 .banner-content {
     color: white;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 30px;
     text-align: right;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
 }
 
 .event-btn {
     position: absolute;
-    right: 2vw;
+    right: 10px;
 }
 
-/* 주문페이지 */
+/* body-back */
 
-.pur-product {
-    width:100%; /* 반응형 너비 설정 */
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.pur-product-info {
-    text-align: center;
-}
-
-.checkout {
-    width: 100%;
-    height: 50%;
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-.check-group {
-    margin-bottom: 20px;
-}
-.check-group label {
-    display: block;
-    font-weight: bold;
-}
-.check-group input[type="text"],
-.check-group input[type="email"],
-.check-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.check-group select {
-    height: 40px;
-}
-.check-group input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-    .container {
-        display: flex;
-        margin: 20px auto;
-    }
-
-    .purchase {
-        width: 100vw;
-        padding: 0 20px;
-    }
-
-    .pur-product img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .container {
-        width: 100%;
-    }
-
-    .purchase {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .pur-product-form {
-        display: flex;
-    }
-
-    .pur-product img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .pur-product:not(:nth-child(2)) {
-        margin-right: 10px;
-    }
-}
+.body-back {
+    height: 25vh;
+    background-color: #C9D6DE;
+} 
