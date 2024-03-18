@@ -1,21 +1,24 @@
 .login,
 .cart,
 .search,
-.nav-login {
+.nav-login,
+.nav__toggle {
     position: relative;
 }
 
-.hover-text {
+.hover-text,
+.hover-text2 {
     display: none;
     position: absolute;
     top: 70px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     color: white;
     font-size: 30px;
     white-space: nowrap;
 }
 
+.nav__toggle:hover .hover-text2,
 .login:hover .hover-text,
 .search:hover .hover-text,
 .cart:hover .hover-text,
@@ -26,6 +29,10 @@
 @media screen and (max-width: 767px) {
     .hover-text {
         left: 2px;
+    }
+
+    .hover-text2 {
+        right: 2px;
     }
 }
   
