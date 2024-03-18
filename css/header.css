@@ -64,6 +64,10 @@
       height: 90px;
       display: flex;
       justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
   }
 
   .nav__list {

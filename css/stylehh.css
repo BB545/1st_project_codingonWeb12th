@@ -43,6 +43,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .containermain {
+        top: 90px;
+    }
+
     .main_content {
         position: absolute;
         top: 50%;
