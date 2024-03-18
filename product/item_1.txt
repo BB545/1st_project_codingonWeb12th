@@ -1,7 +1,5 @@
-<div class="product_name">
+
     <h2>Lake Louise Table / 2,550,000원</h2>
-</div>
-<div class="product_description">
     <p>
         부드러운 곡선과 반짝이는 밀러 스테인레스 상판이 돋보이는 레이크 루이스 테이블은 세계 10대 절경인 Banff Lake Louise에 영감을 받아 투명하고 잔잔한 호수 위로 아름다운 절경이 비춰지는 모습을 형상화하였습니다.
         <br />
@@ -16,4 +14,3 @@
         <li class="style1">Material : 304 Stainless Steel</li>
         <li class="style1">User Recommendations: Cleaner for stainless steel</li>
     </ul>
-</div>
