@@ -8,6 +8,10 @@
       height: 75px;
       display: flex;
       justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
   }
 
   .nav-login {
@@ -23,6 +27,7 @@
       display: none;
       position: fixed;
       z-index: 9999;
+      top: 75px;
       width: 100%;
   }
 

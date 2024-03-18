@@ -62,6 +62,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .containermain {
+        top: 75px;
+    }
+
     .main_content {
         position: absolute;
         left: 20px;
