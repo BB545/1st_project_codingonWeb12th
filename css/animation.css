@@ -26,6 +26,35 @@
     display: block;
 }
 
+.div__item,
+.nav__item,
+#main_brand,
+#main_explain,
+.swiper-name,
+.banner-content,
+.event-btn,
+.pur-name,
+.pur-product-info,
+.pur-product,
+.check-name,
+.check-btn {
+    transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
+}
+
+.swiper-name:hover,
+.banner-content:hover,
+.pur-name:hover {
+    font-size: 70px;
+}
+
+.event-btn:hover,
+.pur-product-info:hover,
+.pur-product:hover,
+.check-name:hover,
+.check-btn:hover {
+    font-size: 40px;
+}
+
 @media screen and (max-width: 767px) {
     .hover-text {
         left: 2px;
@@ -34,13 +63,17 @@
     .hover-text2 {
         right: 2px;
     }
-
-    .div__item {
-        transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
-    }
     
     .div__item:hover {
         font-size: 30px; /* 호버 시 글자 크기 변경 */
+    }
+
+    #main_brand:hover {
+        font-size: 15vw; /* 호버 시 글자 크기 변경 */
+    }
+    
+    #main_explain:hover {
+        font-size: 4vw;
     }
 }
   
@@ -48,12 +81,16 @@
     .hover-text {
         right: 2px;
     }
-
-    .nav__item {
-        transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
-    }
     
     .nav__item:hover {
         font-size: 30px; /* 호버 시 글자 크기 변경 */
+    }
+
+    #main_brand:hover {
+        font-size: 12vw; /* 호버 시 글자 크기 변경 */
+    }
+    
+    #main_explain:hover {
+        font-size: 3vw;
     }
 }
