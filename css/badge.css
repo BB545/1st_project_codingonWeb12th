@@ -1,11 +1,19 @@
 /* badge */
+.badges-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
 .badge {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: blanchedalmond;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .badge-item {
