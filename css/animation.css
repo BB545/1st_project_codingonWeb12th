@@ -1,6 +1,6 @@
-.login,
-.cart,
-.search,
+.login_tog,
+.cart_tog,
+.search_tog,
 .nav-login,
 .nav__toggle {
     position: relative;
@@ -19,9 +19,9 @@
 }
 
 .nav__toggle:hover .hover-text2,
-.login:hover .hover-text,
-.search:hover .hover-text,
-.cart:hover .hover-text,
+.login_tog:hover .hover-text,
+.search_tog:hover .hover-text,
+.cart_tog:hover .hover-text,
 .nav-login:hover .hover-text {
     display: block;
 }
