@@ -34,10 +34,26 @@
     .hover-text2 {
         right: 2px;
     }
+
+    .div__item {
+        transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
+    }
+    
+    .div__item:hover {
+        font-size: 30px; /* 호버 시 글자 크기 변경 */
+    }
 }
   
 @media screen and (min-width: 768px) {
     .hover-text {
         right: 2px;
+    }
+
+    .nav__item {
+        transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
+    }
+    
+    .nav__item:hover {
+        font-size: 30px; /* 호버 시 글자 크기 변경 */
     }
 }
