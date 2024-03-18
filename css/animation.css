@@ -2,7 +2,8 @@
 .cart_tog,
 .search_tog,
 .nav-login,
-.nav__toggle {
+.nav__toggle,
+.badge {
     position: relative;
 }
 
@@ -16,9 +17,25 @@
     color: white;
     font-size: 30px;
     white-space: nowrap;
+    z-index: 101;
+}
+
+.hover-text3 {
+    display: none;
+    position: absolute;
+    /* top: -50px; */
+    right: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 10px;
+    z-index: 101;
 }
 
 .nav__toggle:hover .hover-text2,
+.badge:hover .hover-text3,
 .login_tog:hover .hover-text,
 .search_tog:hover .hover-text,
 .cart_tog:hover .hover-text,

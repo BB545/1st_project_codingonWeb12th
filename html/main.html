@@ -36,7 +36,7 @@
 </head>
 <body>
     <header class="header">
-      <div class="nav-login">
+      <div class="nav-login" id="login_open">
           <svg xmlns="http://www.w3.org/2000/svg" width="40px" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -102,14 +102,16 @@
     </div>
     <div class="badges-container">
       <div class="badge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search badge-item" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search badge-item" id="search-open" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
         </svg>
+        <div class="hover-text3">검색</div>
       </div>
       <div class="badge">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash-fill badge-item" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M6 9.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
         </svg>
+        <div class="hover-text3">장바구니</div>
       </div>
     </div>
     
@@ -276,10 +278,14 @@
       <!--==================== SEARCH script====================-->
       <script>
         const search = document.getElementById('search'),
+        searchop = document.getElementById('search-open'),
         searchBtn = document.getElementById('search-btn'),
         searchClose = document.getElementById('search-close')
         
         /* Search show */
+        searchop.addEventListener('click', () =>{
+        search.classList.add('show-search')
+        })
         searchBtn.addEventListener('click', () =>{
         search.classList.add('show-search')
         })
@@ -350,7 +356,8 @@
       </div>
       <!--==================== Login script ====================-->
       <script>
-        const formOpenBtn = document.querySelector("#form-open"),
+        const formOpenBtn = document.querySelector("#form-open")
+        const formOpenlg = document.querySelector("#login_open"),
         home = document.querySelector(".home"),
         formContainer = document.querySelector(".form_container"),
         formCloseBtn = document.querySelector(".form_close"),
@@ -358,6 +365,7 @@
         loginBtn = document.querySelector("#login"),
         pwShowHide = document.querySelectorAll(".pw_hide");
         
+        formOpenlg.addEventListener("click", () => home.classList.add("show"));
         formOpenBtn.addEventListener("click", () => home.classList.add("show"));
         formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
         
