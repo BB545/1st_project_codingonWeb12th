@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
 
     <link
       rel="stylesheet"
@@ -21,37 +17,103 @@
       rel="stylesheet"
       href="http://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="/css/input_file.css" />
+    <link rel="stylesheet" href="/css/proguct_page.css" />
   </head>
 
   <body>
-    <form>
-      <div>
-        <label for="input_file">파일을 추가해주세요.</label>
-        <input type="file" id="input_file" />
+    <div id="root">
+      <button type="button" id="modal_opne_btn">제품사진 클릭</button>
+    </div>
+    <div id="modal">
+      <div class="modal_content">
+        <div class="close_button">
+          <svg
+            id="modal_close_btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-x-lg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+            />
+          </svg>
+        </div>
+        <div class="content">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <img class="swiper-slide" src="/product_img/item1_1.jpg" />
+              <img class="swiper-slide" src="/product_img/item1_2.jpg" />
+              <img class="swiper-slide" src="/product_img/item1_3.jpg" />
+              <img class="swiper-slide" src="/product_img/item1_4.jpg" />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev">
+              <div class="material-icons"></div>
+            </div>
+            <div class="swiper-button-next">
+              <div class="material-icons"></div>
+            </div>
+          </div>
+          <div id="content" class="description"></div>
+        </div>
+        <div class="buy_button">
+          <a href="" class="button btnFloat but_btn"></a>
+        </div>
+        <div class="modal_layer"></div>
       </div>
-      <div>
-        <button onclick="test(event)">summit</button>
-      </div>
-    </form>
+    </div>
     <script>
-      function test(event) {
-        event.preventDefault(); //submit 할때 새로고침 되는것을 방지
-        let fileObject = document.getElementById("input_file");
-        let fileName = fileObject.files[0];
+      document.getElementById("modal_opne_btn").onclick = function () {
+        document.getElementById("modal").style.display = "block";
+      };
 
-        let fr = new FileReader();
-        fr.readAsText(fileName, "utf-8");
+      document.getElementById("modal_close_btn").onclick = function () {
+        document.getElementById("modal").style.display = "none";
+      };
+      new Swiper(".swiper", {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+      });
+      $(document).ready(function () {
+        var username = "BB545"; // GitHub 사용자 이름
+        var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
+        var filePath = "product/item_1.txt"; // 가져올 파일 경로
 
-        fr.onload = () => {
-          parseText(fr.result);
-        };
-      }
+        // GitHub raw URL 생성
+        var rawURL =
+          "https://raw.githubusercontent.com/" +
+          username +
+          "/" +
+          repo +
+          "/main/" +
+          filePath;
 
-      function parseText(text) {
-        console.log(text);
-        // 여기서 파일 가공하면됨
-      }
+        // AJAX 요청으로 파일 가져오기
+        $.ajax({
+          url: rawURL,
+          success: function (data) {
+            // 파일 내용을 content 요소에 추가
+            $("#content").html(data);
+          },
+          error: function () {
+            $("#content").html(
+              "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
+            );
+          },
+        });
+      });
     </script>
   </body>
 </html>
