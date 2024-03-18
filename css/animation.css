@@ -1,0 +1,36 @@
+.login,
+.cart,
+.search,
+.nav-login {
+    position: relative;
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.login:hover .hover-text,
+.search:hover .hover-text,
+.cart:hover .hover-text,
+.nav-login:hover .hover-text {
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .hover-text {
+        left: 2px;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    .hover-text {
+        right: 2px;
+    }
+}
