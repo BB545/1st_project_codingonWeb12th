@@ -38,7 +38,7 @@
 .pur-product,
 .check-name,
 .check-btn {
-    transition: font-size 0.3s ease; /* 글자 크기 변경을 스무스하게 적용 */
+    transition: font-size 0.5s ease 0.5s;
 }
 
 .swiper-name:hover,
@@ -55,6 +55,15 @@
     font-size: 40px;
 }
 
+.swiper-slide {
+    transition: transform 0.5s ease 0.5s;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
 @media screen and (max-width: 767px) {
     .hover-text {
         left: 2px;
@@ -65,11 +74,11 @@
     }
     
     .div__item:hover {
-        font-size: 30px; /* 호버 시 글자 크기 변경 */
+        font-size: 30px;
     }
 
     #main_brand:hover {
-        font-size: 15vw; /* 호버 시 글자 크기 변경 */
+        font-size: 15vw;
     }
     
     #main_explain:hover {
@@ -83,11 +92,11 @@
     }
     
     .nav__item:hover {
-        font-size: 30px; /* 호버 시 글자 크기 변경 */
+        font-size: 30px;
     }
 
     #main_brand:hover {
-        font-size: 12vw; /* 호버 시 글자 크기 변경 */
+        font-size: 12vw;
     }
     
     #main_explain:hover {
