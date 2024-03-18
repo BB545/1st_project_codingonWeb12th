@@ -17,11 +17,15 @@
       rel="stylesheet"
       href="http://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
     <link rel="stylesheet" href="/css/proguct_page.css" />
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/badge.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/search.css">
   </head>
 
   <body>
@@ -62,27 +66,27 @@
           </svg>
           <div class="hover-text2">메뉴</div>
       </div>
-      <div class="menuBarIcons">
-          <!-- 검색 -->
-          <div class="button button-menu-icon search"><svg xmlns="http://www.w3.org/2000/svg" width="30px"  fill="white" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>
-            <div class="hover-text">검색</div>
-          </div>
-            <!-- 장바구니 -->
-          <div class="button button-menu-icon cart"><svg xmlns="http://www.w3.org/2000/svg" width="30px"  fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">
-              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-            </svg>
-            <div class="hover-text">장바구니</div>
-          </div>
-            <!-- 로그인 -->
-          <div class="button button-menu-icon login"><svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-            </svg>
-            <div class="hover-text">로그인</div>
-          </div>
-      </div>
+      <div class="menuBarIcons nav__actions">
+        <!-- 검색 -->
+        <div class="button button-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30px"  fill="white" class="bi bi-search nav__search" id="search-btn"" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+          <div class="hover-text">검색</div>
+        </div>
+          <!-- 장바구니 -->
+        <div class="button button-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30px"  fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+          <div class="hover-text">장바구니</div>
+        </div>
+          <!-- 로그인 -->
+        <div class="button button-menu-icon" id="form-open"><svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="white" class="bi bi-person-circle nav__login" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+          </svg>
+          <div class="hover-text">로그인</div>
+        </div>
+    </div>
     </header>
     <div class="nav__div">
       <div class="div__item"><a href="#">전체 상품</a></div>
@@ -243,7 +247,130 @@
               </a>
           </div>
         </div>
-      </div>  
+      </div>
+      <!--==================== Login.html ====================-->
+<div class="login" id="login">
+  <div class="home">
+    <div class="form_container">
+      <i class="uil uil-times form_close"></i>
+      <!-- Login From -->
+      <div class="form login_form">
+        <form action="#">
+          <h2>로그인</h2>
+    
+          <div class="input_box">
+            <input type="email" placeholder="이메일을 입력하세요" required />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="비밀번호를 입력하세요" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+    
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">로그인 유지</label>
+            </span>
+            <a href="#" class="forgot_pw">비밀번호 찾기</a>
+          </div>
+    
+          <button class="button">로그인하기</button>
+    
+          <div class="login_signup">계정 없으신가요? <a href="#" id="signup">회원 가입</a></div>
+        </form>
+      </div>
+       <!-- Signup From -->
+       <div class="form signup_form">
+        <form action="#">
+          <h2>회원 가입</h2>
+    
+          <div class="input_box">
+            <input type="email" placeholder="이메일을 입력하기" required />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="새로운 비밀번호 만들기" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="비밀번호 확인" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <button class="button">회원 가입하기</button>
+          <div class="login_signup">이미 계정 있으신가요? <a href="#" id="login">로그인</a></div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+ <!--==================== Login script ====================-->
+   <script>
+    const formOpenBtn = document.querySelector("#form-open"),
+    home = document.querySelector(".home"),
+    formContainer = document.querySelector(".form_container"),
+    formCloseBtn = document.querySelector(".form_close"),
+    signupBtn = document.querySelector("#signup"),
+    loginBtn = document.querySelector("#login"),
+    pwShowHide = document.querySelectorAll(".pw_hide");
+    
+    formOpenBtn.addEventListener("click", () => home.classList.add("show"));
+    formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+    
+    pwShowHide.forEach((icon) => {
+    icon.addEventListener("click", () => {
+    let getPwInput = icon.parentElement.querySelector("input");
+    if (getPwInput.type === "password") {
+    getPwInput.type = "text";
+    icon.classList.replace("uil-eye-slash", "uil-eye");
+    } else {
+    getPwInput.type = "password";
+    icon.classList.replace("uil-eye", "uil-eye-slash");
+    }
+    });
+    });
+    
+    signupBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    formContainer.classList.add("active");
+    });
+    loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    formContainer.classList.remove("active");
+    });
+    </script>
+     <!----------------- Login script ----------->
+     <!--==================== SEARCH html====================-->
+<div class="search" id="search">
+  <form action="" class="search__form">
+  <input type="search" placeholder="검색어를 입력하세요..." class="search__input">
+  </form>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="currentcolor" class="bi bi-x search__close" id="search-close"
+  viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+  </svg>
+  </div>
+<!--==================== SEARCH script====================-->
+  <script>
+  const search = document.getElementById('search'),
+  searchBtn = document.getElementById('search-btn'),
+  searchClose = document.getElementById('search-close')
+  
+  /* Search show */
+  searchBtn.addEventListener('click', () =>{
+  search.classList.add('show-search')
+  })
+  
+  /* Search hidden */
+  searchClose.addEventListener('click', () =>{
+  search.classList.remove('show-search')
+  })
+  </script>
+  
     </footer>
   </body>
 </html>
