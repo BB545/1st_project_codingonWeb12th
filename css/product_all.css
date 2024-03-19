@@ -3,7 +3,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0 0 20px 0;
+  padding: 0 0 100px 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* 각 상품 요소 스타일 */
@@ -31,7 +33,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 0 0 10px 0;
+    padding: 0 0 50px 0;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   /* 각 상품 요소 스타일 */

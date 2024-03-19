@@ -33,16 +33,14 @@
   }
 
   .div__item {
-      padding-right: 20px;
-      background-color: #F0F5F9;
+      background-color: #1E2022;
       text-align: center;
-      border-bottom: 1px solid #1E2022;
       height: 75px;
       line-height: 75px;
   }
 
   .div__item>a {
-      color: black;
+      color: #F0F5F9;
       text-decoration: none;
       font-weight: 500;
   }
