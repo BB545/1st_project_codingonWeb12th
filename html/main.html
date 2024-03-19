@@ -53,9 +53,9 @@
       <nav>
           <ul class="nav__list">
               <li class="nav__item"><a href="/html/all_product_page.html" class="nav__link">전체 상품</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">가구 상품</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">야외 상품</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">생활 상품</a></li>
+              <li class="nav__item"><a href="/html/living_product_page.html" class="nav__link">가구 상품</a></li>
+              <li class="nav__item"><a href="/html/outdoor_product_page.html" class="nav__link">야외 상품</a></li>
+              <li class="nav__item"><a href="/html/life_product_page.html" class="nav__link">생활 상품</a></li>
           </ul>
       </nav>
       <div class="nav__toggle">
@@ -90,9 +90,9 @@
     </header>
     <div class="nav__div">
       <div class="div__item"><a href="/html/all_product_page.html">전체 상품</a></div>
-      <div class="div__item"><a href="#">가구 상품</a></div>
-      <div class="div__item"><a href="#">야외 상품</a></div>
-      <div class="div__item"><a href="#">생활 상품</a></div>
+      <div class="div__item"><a href="/html/living_product_page.html">가구 상품</a></div>
+      <div class="div__item"><a href="/html/outdoor_product_page.html">야외 상품</a></div>
+      <div class="div__item"><a href="/html/life_product_page.html">생활 상품</a></div>
     </div>
     <div class="badges-container">
       <div class="badge">
@@ -111,11 +111,20 @@
 
     <script>
       // JavaScript
-      $(document).ready(function () {
-        $(".nav__toggle").click(function () {
-          $(".nav__div").toggle();
+      $(document).ready(function() {
+        $('.nav__toggle').click(function() {
+            $('.nav__div').toggle();
         });
-      });
+
+        // 화면 크기 변경 시 자동으로 네비게이션 숨기기
+        $(window).resize(function() {
+            if ($(window).width() < 768) {
+                $('.nav__div').show();
+            } else {
+                $('.nav__div').hide();
+            }
+        });
+    });
     </script>
     <main>
       <article class="containermain">

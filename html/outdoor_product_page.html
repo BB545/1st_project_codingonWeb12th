@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/css/badge.css" />
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/search.css" />
-    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/cart.css" />
   </head>
 
   <body>
@@ -57,10 +57,12 @@
       </div>
       <nav>
         <ul class="nav__list">
-          <li class="nav__item"><a href="/html/all_product_page.html">전체 상품</a></li>
-          <li class="nav__item"><a href="#">가구 상품</a></li>
-          <li class="nav__item"><a href="#">야외 상품</a></li>
-          <li class="nav__item"><a href="#">생활 상품</a></li>
+          <li class="nav__item">
+            <a href="/html/all_product_page.html">전체 상품</a>
+          </li>
+          <li class="nav__item"><a href="/html/living_product_page.html">가구 상품</a></li>
+          <li class="nav__item"><a href="/html/outdoor_product_page.html">야외 상품</a></li>
+          <li class="nav__item"><a href="/html/life_product_page.html">생활 상품</a></li>
         </ul>
       </nav>
       <div class="nav__toggle">
@@ -130,10 +132,12 @@
       </div>
     </header>
     <div class="nav__div">
-      <div class="div__item"><a href="/html/all_product_page.html">전체 상품</a></div>
-      <div class="div__item"><a href="#">가구 상품</a></div>
-      <div class="div__item"><a href="#">야외 상품</a></div>
-      <div class="div__item"><a href="#">생활 상품</a></div>
+      <div class="div__item">
+        <a href="/html/all_product_page.html">전체 상품</a>
+      </div>
+      <div class="div__item"><a href="/html/living_product_page.html">가구 상품</a></div>
+      <div class="div__item"><a href="/html/outdoor_product_page.html">야외 상품</a></div>
+      <div class="div__item"><a href="/html/life_product_page.html">생활 상품</a></div>
     </div>
     <div class="badges-container">
       <div class="badge">
@@ -173,12 +177,23 @@
 
     <script>
       // JavaScript
-      $(document).ready(function () {
-        $(".nav__toggle").click(function () {
-          $(".nav__div").toggle();
+      $(document).ready(function() {
+        $('.nav__toggle').click(function() {
+            $('.nav__div').toggle();
         });
-      });
+
+        // 화면 크기 변경 시 자동으로 네비게이션 숨기기
+        $(window).resize(function() {
+            if ($(window).width() < 768) {
+                $('.nav__div').show();
+            } else {
+                $('.nav__div').hide();
+            }
+        });
+    });
     </script>
+
+    <article class="body-back"></article>
 
     <!-- main -->
     <div class="container">
@@ -227,40 +242,6 @@
 
       <div class="grid">
         <div class="card">
-          <img id="item1" src="/item_jpgs/item1.jpg" alt="상품 1" />
-          <h2>Lake Louise Table</h2>
-          <p>2,550,000원</p>
-        </div>
-        <div class="card">
-          <img id="item2" src="/item_jpgs/item2.jpg" alt="상품 2" />
-          <h2>'WOW' Cube</h2>
-          <p>6,400,000원</p>
-        </div>
-        <div class="card">
-          <img id="item3" src="/item_jpgs/item3.jpg" alt="상품 3" />
-          <h2>'WOW' Cube Sofa Table</h2>
-          <p>8,800,000원</p>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <img id="item4" src="/item_jpgs/item4.jpg" alt="상품 4" />
-          <h2>Amante Table</h2>
-          <p>2,100,000원</p>
-        </div>
-        <div class="card">
-          <img id="item5" src="/item_jpgs/item5.jpg" alt="상품 5" />
-          <h2>Pallet Table</h2>
-          <p>5,800,000원</p>
-        </div>
-        <div class="card">
-          <img id="item6" src="/item_jpgs/item6.jpg" alt="상품 6" />
-          <h2>Lounge Rock Table & Stool</h2>
-          <p>3,100,000원 & 930,000원</p>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="card">
           <img id="item7" src="/item_jpgs/item7.jpg" alt="상품 7" />
           <h2>Iconic Booth</h2>
           <p>6,000,000원</p>
@@ -270,265 +251,9 @@
           <h2>Arc Stool</h2>
           <p>1,150,000원</p>
         </div>
-        <div class="card">
-          <img id="item9" src="/item_jpgs/item9.jpg" alt="상품 9" />
-          <h2>Ashiba Wall Mirror #1, #2</h2>
-          <p>650,000원</p>
-        </div>
       </div>
     </div>
     <script>
-      const btn_data1 = (document.getElementById("item1").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_1.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item1_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item1_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item1_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item1_4.jpg");
-        });
-      const btn_data2 = (document.getElementById("item2").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_2.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item2_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item2_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item2_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item2_4.jpg");
-        });
-
-      const btn_data3 = (document.getElementById("item3").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_3.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item3_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item3_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item3_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item3_4.jpg");
-        });
-
-      const btn_data4 = (document.getElementById("item4").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_4.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item4_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item4_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item4_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item4_4.jpg");
-        });
-
-      const btn_data5 = (document.getElementById("item5").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_5.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item5_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item5_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item5_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item5_4.jpg");
-        });
-
-      const btn_data6 = (document.getElementById("item6").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_6.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item6_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item6_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item6_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item6_4.jpg");
-        });
-
       const btn_data7 = (document.getElementById("item7").onclick =
         function () {
           var username = "BB545"; // GitHub 사용자 이름
@@ -613,48 +338,6 @@
             .setAttribute("src", "/product_img/item8_4.jpg");
         });
 
-      const btn_data9 = (document.getElementById("item9").onclick =
-        function () {
-          var username = "BB545"; // GitHub 사용자 이름
-          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_9.txt";
-          // GitHub raw URL 생성
-          var rawURL =
-            "https://raw.githubusercontent.com/" +
-            username +
-            "/" +
-            repo +
-            "/main/" +
-            filePath;
-
-          // AJAX 요청으로 파일 가져오기
-          $.ajax({
-            url: rawURL,
-            success: function (data) {
-              // 파일 내용을 content 요소에 추가
-              $("#content").html(data);
-            },
-            error: function () {
-              $("#content").html(
-                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
-              );
-            },
-          });
-          document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item9_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item9_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item9_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item9_4.jpg");
-        });
-
       document.getElementById("modal_close_btn").onclick = function () {
         document.getElementById("modal").style.display = "none";
         document.body.style.overflow = "";
@@ -676,6 +359,8 @@
 
       // $(document).ready(function () {});
     </script>
+
+  <article class="body-back"></article>
 
     <footer>
       <div class="footer">
@@ -739,78 +424,74 @@
       </div>
     </footer>
     <!--==================== Login.html ====================-->
-      <div class="home">
-        <div class="form_container">
-          <i class="uil uil-times form_close"></i>
-          <!-- Login From -->
-          <div class="form login_form">
-            <form action="#">
-              <h2>로그인</h2>
+    <div class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>로그인</h2>
 
-              <div class="input_box">
-                <input
-                  type="email"
-                  placeholder="이메일을 입력하세요"
-                  required
-                />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input
-                  type="password"
-                  placeholder="비밀번호를 입력하세요"
-                  required
-                />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
+            <div class="input_box">
+              <input type="email" placeholder="이메일을 입력하세요" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+                required
+              />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
 
-              <div class="option_field">
-                <span class="checkbox">
-                  <input type="checkbox" id="check" />
-                  <label for="check">로그인 유지</label>
-                </span>
-                <a href="#" class="forgot_pw">비밀번호 찾기</a>
-              </div>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">로그인 유지</label>
+              </span>
+              <a href="#" class="forgot_pw">비밀번호 찾기</a>
+            </div>
 
-              <button class="button">로그인하기</button>
+            <button class="button">로그인하기</button>
 
-              <div class="login_signup">
-                계정 없으신가요? <a href="#" id="signup">회원 가입</a>
-              </div>
-            </form>
-          </div>
-          <!-- Signup From -->
-          <div class="form signup_form">
-            <form action="#">
-              <h2>회원 가입</h2>
+            <div class="login_signup">
+              계정 없으신가요? <a href="#" id="signup">회원 가입</a>
+            </div>
+          </form>
+        </div>
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>회원 가입</h2>
 
-              <div class="input_box">
-                <input type="email" placeholder="이메일을 입력하기" required />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input
-                  type="password"
-                  placeholder="새로운 비밀번호 만들기"
-                  required
-                />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="비밀번호 확인" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-              <button class="button">회원 가입하기</button>
-              <div class="login_signup">
-                이미 계정 있으신가요? <a href="#" id="login">로그인</a>
-              </div>
-            </form>
-          </div>
+            <div class="input_box">
+              <input type="email" placeholder="이메일을 입력하기" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input
+                type="password"
+                placeholder="새로운 비밀번호 만들기"
+                required
+              />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="비밀번호 확인" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <button class="button">회원 가입하기</button>
+            <div class="login_signup">
+              이미 계정 있으신가요? <a href="#" id="login">로그인</a>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
     <!--==================== Login script ====================-->
     <script>
       const formOpenlg = document.querySelector("#login_open");

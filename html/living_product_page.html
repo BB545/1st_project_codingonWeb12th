@@ -60,9 +60,9 @@
           <li class="nav__item">
             <a href="/html/all_product_page.html">전체 상품</a>
           </li>
-          <li class="nav__item"><a href="#">가구 상품</a></li>
-          <li class="nav__item"><a href="#">야외 상품</a></li>
-          <li class="nav__item"><a href="#">생활 상품</a></li>
+          <li class="nav__item"><a href="/html/living_product_page.html">가구 상품</a></li>
+          <li class="nav__item"><a href="/html/outdoor_product_page.html">야외 상품</a></li>
+          <li class="nav__item"><a href="/html/life_product_page.html">생활 상품</a></li>
         </ul>
       </nav>
       <div class="nav__toggle">
@@ -131,13 +131,16 @@
         </div>
       </div>
     </header>
+
+    <article class="body-back"></article>
+
     <div class="nav__div">
       <div class="div__item">
         <a href="/html/all_product_page.html">전체 상품</a>
       </div>
-      <div class="div__item"><a href="#">가구 상품</a></div>
-      <div class="div__item"><a href="#">야외 상품</a></div>
-      <div class="div__item"><a href="#">생활 상품</a></div>
+      <div class="div__item"><a href="/html/living_product_page.html">가구 상품</a></div>
+      <div class="div__item"><a href="/html/outdoor_product_page.html">야외 상품</a></div>
+      <div class="div__item"><a href="/html/life_product_page.html">생활 상품</a></div>
     </div>
     <div class="badges-container">
       <div class="badge">
@@ -177,11 +180,20 @@
 
     <script>
       // JavaScript
-      $(document).ready(function () {
-        $(".nav__toggle").click(function () {
-          $(".nav__div").toggle();
+      $(document).ready(function() {
+        $('.nav__toggle').click(function() {
+            $('.nav__div').toggle();
         });
-      });
+
+        // 화면 크기 변경 시 자동으로 네비게이션 숨기기
+        $(window).resize(function() {
+            if ($(window).width() < 768) {
+                $('.nav__div').show();
+            } else {
+                $('.nav__div').hide();
+            }
+        });
+    });
     </script>
 
     <!-- main -->
@@ -231,23 +243,45 @@
 
       <div class="grid">
         <div class="card">
-          <img id="item7" src="/item_jpgs/item7.jpg" alt="상품 7" />
-          <h2>Iconic Booth</h2>
-          <p>6,000,000원</p>
+          <img id="item1" src="/item_jpgs/item1.jpg" alt="상품 1" />
+          <h2>Lake Louise Table</h2>
+          <p>2,550,000원</p>
         </div>
         <div class="card">
-          <img id="item8" src="/item_jpgs/item8.jpg" alt="상품 8" />
-          <h2>Arc Stool</h2>
-          <p>1,150,000원</p>
+          <img id="item2" src="/item_jpgs/item2.jpg" alt="상품 2" />
+          <h2>'WOW' Cube</h2>
+          <p>6,400,000원</p>
+        </div>
+        <div class="card">
+          <img id="item3" src="/item_jpgs/item3.jpg" alt="상품 3" />
+          <h2>'WOW' Cube Sofa Table</h2>
+          <p>8,800,000원</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img id="item4" src="/item_jpgs/item4.jpg" alt="상품 4" />
+          <h2>Amante Table</h2>
+          <p>2,100,000원</p>
+        </div>
+        <div class="card">
+          <img id="item5" src="/item_jpgs/item5.jpg" alt="상품 5" />
+          <h2>Pallet Table</h2>
+          <p>5,800,000원</p>
+        </div>
+        <div class="card">
+          <img id="item6" src="/item_jpgs/item6.jpg" alt="상품 6" />
+          <h2>Lounge Rock Table & Stool</h2>
+          <p>3,100,000원 & 930,000원</p>
         </div>
       </div>
     </div>
     <script>
-      const btn_data7 = (document.getElementById("item7").onclick =
+      const btn_data1 = (document.getElementById("item1").onclick =
         function () {
           var username = "BB545"; // GitHub 사용자 이름
           var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_7.txt";
+          var filePath = "product/item_1.txt";
           // GitHub raw URL 생성
           var rawURL =
             "https://raw.githubusercontent.com/" +
@@ -273,23 +307,64 @@
           document.getElementById("modal").style.display = "block";
           document
             .getElementById("item__1")
-            .setAttribute("src", "/product_img/item7_1.jpg");
+            .setAttribute("src", "/product_img/item1_1.jpg");
           document
             .getElementById("item__2")
-            .setAttribute("src", "/product_img/item7_2.jpg");
+            .setAttribute("src", "/product_img/item1_2.jpg");
           document
             .getElementById("item__3")
-            .setAttribute("src", "/product_img/item7_3.jpg");
+            .setAttribute("src", "/product_img/item1_3.jpg");
           document
             .getElementById("item__4")
-            .setAttribute("src", "/product_img/item7_4.jpg");
+            .setAttribute("src", "/product_img/item1_4.jpg");
+        });
+      const btn_data2 = (document.getElementById("item2").onclick =
+        function () {
+          var username = "BB545"; // GitHub 사용자 이름
+          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
+          var filePath = "product/item_2.txt";
+          // GitHub raw URL 생성
+          var rawURL =
+            "https://raw.githubusercontent.com/" +
+            username +
+            "/" +
+            repo +
+            "/main/" +
+            filePath;
+
+          // AJAX 요청으로 파일 가져오기
+          $.ajax({
+            url: rawURL,
+            success: function (data) {
+              // 파일 내용을 content 요소에 추가
+              $("#content").html(data);
+            },
+            error: function () {
+              $("#content").html(
+                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
+              );
+            },
+          });
+          document.getElementById("modal").style.display = "block";
+          document
+            .getElementById("item__1")
+            .setAttribute("src", "/product_img/item2_1.jpg");
+          document
+            .getElementById("item__2")
+            .setAttribute("src", "/product_img/item2_2.jpg");
+          document
+            .getElementById("item__3")
+            .setAttribute("src", "/product_img/item2_3.jpg");
+          document
+            .getElementById("item__4")
+            .setAttribute("src", "/product_img/item2_4.jpg");
         });
 
-      const btn_data8 = (document.getElementById("item8").onclick =
+      const btn_data3 = (document.getElementById("item3").onclick =
         function () {
           var username = "BB545"; // GitHub 사용자 이름
           var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
-          var filePath = "product/item_8.txt";
+          var filePath = "product/item_3.txt";
           // GitHub raw URL 생성
           var rawURL =
             "https://raw.githubusercontent.com/" +
@@ -315,16 +390,142 @@
           document.getElementById("modal").style.display = "block";
           document
             .getElementById("item__1")
-            .setAttribute("src", "/product_img/item8_1.jpg");
+            .setAttribute("src", "/product_img/item3_1.jpg");
           document
             .getElementById("item__2")
-            .setAttribute("src", "/product_img/item8_2.jpg");
+            .setAttribute("src", "/product_img/item3_2.jpg");
           document
             .getElementById("item__3")
-            .setAttribute("src", "/product_img/item8_3.jpg");
+            .setAttribute("src", "/product_img/item3_3.jpg");
           document
             .getElementById("item__4")
-            .setAttribute("src", "/product_img/item8_4.jpg");
+            .setAttribute("src", "/product_img/item3_4.jpg");
+        });
+
+      const btn_data4 = (document.getElementById("item4").onclick =
+        function () {
+          var username = "BB545"; // GitHub 사용자 이름
+          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
+          var filePath = "product/item_4.txt";
+          // GitHub raw URL 생성
+          var rawURL =
+            "https://raw.githubusercontent.com/" +
+            username +
+            "/" +
+            repo +
+            "/main/" +
+            filePath;
+
+          // AJAX 요청으로 파일 가져오기
+          $.ajax({
+            url: rawURL,
+            success: function (data) {
+              // 파일 내용을 content 요소에 추가
+              $("#content").html(data);
+            },
+            error: function () {
+              $("#content").html(
+                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
+              );
+            },
+          });
+          document.getElementById("modal").style.display = "block";
+          document
+            .getElementById("item__1")
+            .setAttribute("src", "/product_img/item4_1.jpg");
+          document
+            .getElementById("item__2")
+            .setAttribute("src", "/product_img/item4_2.jpg");
+          document
+            .getElementById("item__3")
+            .setAttribute("src", "/product_img/item4_3.jpg");
+          document
+            .getElementById("item__4")
+            .setAttribute("src", "/product_img/item4_4.jpg");
+        });
+
+      const btn_data5 = (document.getElementById("item5").onclick =
+        function () {
+          var username = "BB545"; // GitHub 사용자 이름
+          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
+          var filePath = "product/item_5.txt";
+          // GitHub raw URL 생성
+          var rawURL =
+            "https://raw.githubusercontent.com/" +
+            username +
+            "/" +
+            repo +
+            "/main/" +
+            filePath;
+
+          // AJAX 요청으로 파일 가져오기
+          $.ajax({
+            url: rawURL,
+            success: function (data) {
+              // 파일 내용을 content 요소에 추가
+              $("#content").html(data);
+            },
+            error: function () {
+              $("#content").html(
+                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
+              );
+            },
+          });
+          document.getElementById("modal").style.display = "block";
+          document
+            .getElementById("item__1")
+            .setAttribute("src", "/product_img/item5_1.jpg");
+          document
+            .getElementById("item__2")
+            .setAttribute("src", "/product_img/item5_2.jpg");
+          document
+            .getElementById("item__3")
+            .setAttribute("src", "/product_img/item5_3.jpg");
+          document
+            .getElementById("item__4")
+            .setAttribute("src", "/product_img/item5_4.jpg");
+        });
+
+      const btn_data6 = (document.getElementById("item6").onclick =
+        function () {
+          var username = "BB545"; // GitHub 사용자 이름
+          var repo = "1st_project_codingonWeb12th"; // GitHub 저장소 이름
+          var filePath = "product/item_6.txt";
+          // GitHub raw URL 생성
+          var rawURL =
+            "https://raw.githubusercontent.com/" +
+            username +
+            "/" +
+            repo +
+            "/main/" +
+            filePath;
+
+          // AJAX 요청으로 파일 가져오기
+          $.ajax({
+            url: rawURL,
+            success: function (data) {
+              // 파일 내용을 content 요소에 추가
+              $("#content").html(data);
+            },
+            error: function () {
+              $("#content").html(
+                "<p>파일을 불러오는 데 문제가 발생했습니다.</p>"
+              );
+            },
+          });
+          document.getElementById("modal").style.display = "block";
+          document
+            .getElementById("item__1")
+            .setAttribute("src", "/product_img/item6_1.jpg");
+          document
+            .getElementById("item__2")
+            .setAttribute("src", "/product_img/item6_2.jpg");
+          document
+            .getElementById("item__3")
+            .setAttribute("src", "/product_img/item6_3.jpg");
+          document
+            .getElementById("item__4")
+            .setAttribute("src", "/product_img/item6_4.jpg");
         });
 
       document.getElementById("modal_close_btn").onclick = function () {
@@ -348,6 +549,7 @@
 
       // $(document).ready(function () {});
     </script>
+    <article class="body-back"></article>
 
     <footer>
       <div class="footer">
