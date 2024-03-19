@@ -1,0 +1,122 @@
+.login_tog,
+.cart_tog,
+.search_tog,
+.nav-login,
+.nav__toggle,
+.badge {
+    position: relative;
+}
+
+.hover-text,
+.hover-text2 {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+    z-index: 101;
+}
+
+.hover-text3 {
+    display: none;
+    position: absolute;
+    /* top: -50px; */
+    right: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 10px;
+    z-index: 101;
+}
+
+.nav__toggle:hover .hover-text2,
+.badge:hover .hover-text3,
+.login_tog:hover .hover-text,
+.search_tog:hover .hover-text,
+.cart_tog:hover .hover-text,
+.nav-login:hover .hover-text {
+    display: block;
+}
+
+.div__item,
+.nav__item,
+#main_brand,
+#main_explain,
+.swiper-name,
+.banner-content,
+.event-btn,
+.pur-name,
+.pur-product-info,
+.pur-product,
+.check-name,
+.check-btn {
+    transition: font-size 0.5s ease 0.5s;
+}
+
+.swiper-name:hover,
+.banner-content:hover,
+.pur-name:hover {
+    font-size: 70px;
+}
+
+.event-btn:hover,
+.pur-product-info:hover,
+.pur-product:hover,
+.check-name:hover,
+.check-btn:hover {
+    font-size: 40px;
+}
+
+.swiper-slide {
+    transition: transform 0.5s ease 0.5s;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+@media screen and (max-width: 767px) {
+    .hover-text {
+        left: 2px;
+    }
+
+    .hover-text2 {
+        right: 2px;
+    }
+    
+    .div__item:hover {
+        font-size: 30px;
+    }
+
+    #main_brand:hover {
+        font-size: 15vw;
+    }
+    
+    #main_explain:hover {
+        font-size: 4vw;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    .hover-text {
+        right: 2px;
+    }
+    
+    .nav__item:hover {
+        font-size: 30px;
+    }
+
+    #main_brand:hover {
+        font-size: 12vw;
+    }
+    
+    #main_explain:hover {
+        font-size: 3vw;
+    }
+}

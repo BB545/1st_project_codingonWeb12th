@@ -1,3 +1,11 @@
+body {
+  background-color: #C9D6DE;
+}
+
+.main {
+  margin-top: 90px;
+}
+
 #modal {
   display: none;
   /* position: fixed; */
@@ -125,6 +133,10 @@ a.button {
 }
 
 @media screen and (max-width: 767px) {
+  .main {
+    margin-top: 75px;
+  }
+
   #modal {
     display: none;
     /* position: fixed; */
