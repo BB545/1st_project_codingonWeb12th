@@ -3,13 +3,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 0 0 20px 0;
 }
 
 /* 각 상품 요소 스타일 */
 .card {
-  border: 1px solid #ccc;
-  padding: 20px;
   text-align: center;
 }
 
@@ -19,10 +17,39 @@
   object-fit: cover;
 }
 
-h2 {
+.card h2 {
   font-size: 1.5em;
 }
 
-p {
+.card p {
   font-size: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  /* 그리드 컨테이너 스타일 */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 0 10px 0;
+  }
+
+  /* 각 상품 요소 스타일 */
+  .card {
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card h2 {
+    font-size: 3vw;
+  }
+
+  .card p {
+    font-size: 2vw;
+  }
 }

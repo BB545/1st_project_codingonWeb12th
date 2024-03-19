@@ -1,5 +1,5 @@
 body {
-  background-color: #C9D6DE;
+  background-color: #c9d6de;
 }
 
 .main {
@@ -8,12 +8,13 @@ body {
 
 #modal {
   display: none;
-  /* position: fixed; */
+  position: relative;
   z-index: 9999;
 }
 
 #modal .modal_content {
-  /* position: fixed; */
+  position: absolute;
+  width: 95%;
   margin: 20px auto;
   padding: 20px 10px;
   background: none;
@@ -139,11 +140,12 @@ a.button {
 
   #modal {
     display: none;
-    /* position: fixed; */
+    position: relative;
     z-index: 1;
   }
 
   #modal .modal_content {
+    position: absolute;
     margin: 20px auto;
     padding: 20px 10px;
     background: none;
@@ -161,7 +163,7 @@ a.button {
 
   .swiper {
     width: 90%;
-    /* position: relative; */
+    position: relative;
     margin: 0 10px 0 10px;
   }
 
@@ -195,5 +197,12 @@ a.button {
   .close_button {
     display: flex;
     flex-direction: row-reverse;
+  }
+  p {
+    font-size: 2vw;
+  }
+  ul,
+  li {
+    font-size: 2vw;
   }
 }
