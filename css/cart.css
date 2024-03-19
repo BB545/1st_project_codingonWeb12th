@@ -16,9 +16,8 @@
   .cart__close{
     position: absolute;
     top: 2rem;
-    right: 2rem;
-    font-size: 4rem;
-    color: white;
+    /* right: 2rem; */
+    color: black;
     cursor: pointer;
   }
   /*=============== SEARCH ===============*/
