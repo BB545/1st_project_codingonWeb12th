@@ -1,0 +1,77 @@
+/*=============== SEARCH ===============*/
+.cart {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(220, 213, 213);
+    backdrop-filter: blur(24px);
+    padding: 8rem 1.5rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s;
+  }
+  .cart__close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+  }
+  /*=============== SEARCH ===============*/
+  .cart__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    column-gap: .5rem;
+    background-color:transparent;
+    transform: translateY(-1rem);
+    transition: transform .4s;
+  }
+  
+  
+  /* Show search */
+  .show-cart {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  .show-cart .cart__form {
+    transform: translateY(0);
+  }
+  #cart-close{
+    width: max-content;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    font-size: 4rem;
+  }
+  .empty{
+    position: relative;
+    top: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+  .empty ~ span{
+    position: relative;
+    top: 20px;
+    font-size: large;
+    text-align: center;
+  
+  }
+  /*모바일*/
+  @media  screen and (max-width: 767px){
+    .empty{
+      font-size: larger;
+    }
+    .empty ~ span{
+      font-size: normal;
+    }
+    .bi-cart2{
+      width: 200px;
+    }
+  }
