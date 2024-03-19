@@ -102,7 +102,7 @@
         <div class="hover-text3">검색</div>
       </div>
       <div class="badge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash-fill badge-item" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash-fill badge-item" id="cart-open" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M6 9.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
         </svg>
         <div class="hover-text3">장바구니</div>
@@ -364,10 +364,14 @@
 <!-- /*=============== Cart script ===============*/ -->
 <script>
 const cart = document.getElementById('cart'),
+cartop = document.getElementById('cart-open'),
 cartBtn = document.getElementById('cart-btn'),
 cartClose = document.getElementById('cart-close')
 
 /* Cart show */
+cartop.addEventListener('click', () =>{
+cart.classList.add('show-cart')
+})
 cartBtn.addEventListener('click', () =>{
 cart.classList.add('show-cart')
 })

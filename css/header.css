@@ -21,6 +21,7 @@
 
   .nav__list {
       display: none; 
+      margin-bottom: 0;
   }
 
   .nav__div {
@@ -73,6 +74,7 @@
   .nav__list {
       list-style: none;
       display: flex;
+      margin-bottom: 0;
   }
 
   .nav__brandLogo {
