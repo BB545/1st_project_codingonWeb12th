@@ -8,6 +8,7 @@
       height: 75px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       position: fixed;
       top: 0;
       left: 0;
@@ -16,11 +17,11 @@
 
   .nav-login {
       padding-left: 20px;
-      line-height: 75px;
     }
 
   .nav__list {
       display: none; 
+      margin-bottom: 0;
   }
 
   .nav__div {
@@ -47,7 +48,6 @@
   }
   
   .nav__toggle {
-      line-height: 75px;
       padding-right: 20px;
   }
 
@@ -64,6 +64,7 @@
       height: 90px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       position: fixed;
       top: 0;
       left: 0;
@@ -73,7 +74,7 @@
   .nav__list {
       list-style: none;
       display: flex;
-      line-height: 90px;   
+      margin-bottom: 0;
   }
 
   .nav__brandLogo {
@@ -108,7 +109,6 @@
 
   .menuBarIcons {
       display: flex;
-      line-height: 90px;
   }
 
   .button-menu-icon {
