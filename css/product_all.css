@@ -1,0 +1,28 @@
+/* 그리드 컨테이너 스타일 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 각 상품 요소 스타일 */
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+}

@@ -1,17 +1,14 @@
 #modal {
   display: none;
-  position: relative;
-  z-index: 1;
+  /* position: fixed; */
+  z-index: 9999;
 }
 
 #modal .modal_content {
-  /* display: flex;
-  flex-direction: column; */
-  /* width: 90%; */
+  /* position: fixed; */
   margin: 20px auto;
   padding: 20px 10px;
   background: none;
-  /* border: 2px solid #2d2d2d; */
   color: white;
 }
 
@@ -130,23 +127,18 @@ a.button {
 @media screen and (max-width: 767px) {
   #modal {
     display: none;
-    position: relative;
+    /* position: fixed; */
     z-index: 1;
   }
 
   #modal .modal_content {
-    /* display: flex;
-        flex-direction: column; */
-    /* width: 90%; */
     margin: 20px auto;
     padding: 20px 10px;
     background: none;
-    /* border: 2px solid #2d2d2d; */
     color: white;
   }
 
   #modal .modal_layer {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -157,7 +149,7 @@ a.button {
 
   .swiper {
     width: 90%;
-    position: relative;
+    /* position: relative; */
     margin: 0 10px 0 10px;
   }
 
