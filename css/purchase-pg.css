@@ -4,6 +4,12 @@ body {
     background-color: #C9D6DE;
 }
 
+h2 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
 .container {
     background-color: white;
 }
