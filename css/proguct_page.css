@@ -210,11 +210,4 @@ a.button {
     display: flex;
     flex-direction: row-reverse;
   }
-  p {
-    font-size: 2vw;
-  }
-  ul,
-  li {
-    font-size: 2vw;
-  }
 }
