@@ -8,6 +8,31 @@
   margin-right: 20px;
 }
 
+ /* 이미지 컨테이너 */
+ .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 이미지 저장해서 보기 버튼 */
+.save-image-btn {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0 5px;
+  font-size: 2vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 이미지 호버 시 버튼 표시 */
+.image-container:hover .save-image-btn {
+  display: block;
+}
+
 /* 각 상품 요소 스타일 */
 .card {
   text-align: center;
@@ -41,6 +66,10 @@ h2 {
     padding: 0 0 50px 0;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .save-image-btn {
+    font-size: 17px;
   }
 
   /* 각 상품 요소 스타일 */

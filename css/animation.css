@@ -3,7 +3,8 @@
 .search_tog,
 .nav-login,
 .nav__toggle,
-.badge {
+.badge,
+.badge-ai {
     position: relative;
 }
 
@@ -40,7 +41,8 @@
 .login_tog:hover .hover-text,
 .search_tog:hover .hover-text,
 .cart_tog:hover .hover-text,
-.nav-login:hover .hover-text {
+.nav-login:hover .hover-text,
+.badge-ai:hover .hover-text3 {
     display: block;
 }
 
