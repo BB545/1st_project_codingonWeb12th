@@ -181,11 +181,7 @@
 
         // 화면 크기 변경 시 자동으로 네비게이션 숨기기
         $(window).resize(function() {
-            if ($(window).width() < 768) {
-                $('.nav__div').show();
-            } else {
-                $('.nav__div').hide();
-            }
+            $('.nav__div').hide();
         });
     });
     </script>
