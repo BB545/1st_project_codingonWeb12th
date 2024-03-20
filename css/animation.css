@@ -55,7 +55,8 @@
 .pur-product-info,
 .pur-product,
 .check-name,
-.check-btn {
+.check-btn,
+.plus-btn-item {
     transition: font-size 0.3s ease 0.3s;
 }
 
@@ -69,7 +70,8 @@
 .pur-product-info:hover,
 .pur-product:hover,
 .check-name:hover,
-.check-btn:hover {
+.check-btn:hover,
+.plus-btn-item:hover {
     font-size: 40px;
 }
 

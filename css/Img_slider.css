@@ -3,6 +3,13 @@
   overflow: hidden;
 }
 
+.plus-btn-item {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  z-index: 5;
+}
+
 .swiper-name {
   color: black;
   font-size: 40px;
