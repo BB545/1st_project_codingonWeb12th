@@ -79,7 +79,7 @@ h2 {
 @media screen and (min-width: 768px) {
     .container {
         display: flex;
-        margin: 90px auto;
+        margin: 120px auto;
     }
 
     .purchase {
@@ -96,7 +96,7 @@ h2 {
 @media screen and (max-width: 767px) {
     .container {
         width: 100%;
-        margin: 75px auto;
+        margin: 100px auto;
     }
 
     .purchase {

@@ -56,7 +56,8 @@
 .pur-product,
 .check-name,
 .check-btn,
-.plus-btn-item {
+.plus-btn-item,
+.our-pro {
     transition: font-size 0.3s ease 0.3s;
 }
 
@@ -73,6 +74,10 @@
 .check-btn:hover,
 .plus-btn-item:hover {
     font-size: 40px;
+}
+
+.our-pro:hover {
+    font-size: 25px;
 }
 
 .swiper-slide,
