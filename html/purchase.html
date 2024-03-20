@@ -457,12 +457,12 @@
           <input type="email" placeholder="이메일을 입력하기" required />
           <i class="uil uil-envelope-alt email"></i>
         </div>
-        <div class="input_box">
+        <div class="input_box" id="new-pw">
           <input type="password" placeholder="새로운 비밀번호 만들기" required />
           <i class="uil uil-lock password"></i>
           <i class="uil uil-eye-slash pw_hide"></i>
         </div>
-        <div class="input_box">
+        <div class="input_box" id="chk-pw">
           <input type="password" placeholder="비밀번호 확인" required />
           <i class="uil uil-lock password"></i>
           <i class="uil uil-eye-slash pw_hide"></i>
@@ -510,9 +510,15 @@ loggedBtn.addEventListener("click",(e)=>{
   home.classList.remove("show");
 });
 signedBtn.addEventListener("click",(e)=>{
-  alert("회원 가입에 성공하셨습니다!");
-  home.classList.remove("show");
-  
+  event.preventDefault();
+  var newPw = document.getElementById('new-pw').querySelector('input').value;
+  var chkPw = document.getElementById('chk-pw').querySelector('input').value;
+  if (newPw === chkPw) {
+    alert("회원 가입에 성공하셨습니다!");
+    home.classList.remove("show");
+  } else {
+    alert("설정한 비밀 번호와 비밀 번호 확인이 일치하지 않습니다.")
+  } 
 });
 signupBtn.addEventListener("click", (e) => {
   e.preventDefault();
