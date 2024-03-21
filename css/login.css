@@ -19,7 +19,6 @@
 .home.show .blur-background {
     display: block; /* 홈 클래스가 보일 때만 배경 보이기 */
 }
-
   /* Form */
   .form_container {
     position: fixed;
@@ -142,6 +141,7 @@
     text-align: center;
     margin-top: 15px;
   }
+  
   #signup, #login{
     font-weight: bolder;
   }
