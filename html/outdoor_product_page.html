@@ -266,24 +266,19 @@
       <div class="grid">
         <div class="card image-container">
           <img id="item7" src="/item_jpgs/item7.jpg" alt="상품 7" />
-          <div class="save-image-btn" onclick="saveImage()">이미지 저장해서 보기</div>
+          <div class="save-image-btn" onclick="alert('이미지를 저장합니다.')">이미지 저장해서 보기</div>
           <h2>아이코닉 부스</h2>
           <p>6,000,000원</p>
         </div>
         <div class="card image-container">
           <img id="item8" src="/item_jpgs/item8.jpg" alt="상품 8" />
-          <div class="save-image-btn" onclick="saveImage()">이미지 저장해서 보기</div>
+          <div class="save-image-btn" onclick="alert('이미지를 저장합니다.')">이미지 저장해서 보기</div>
           <h2>아크 의자</h2>
           <p>1,150,000원</p>
         </div>
       </div>
     </div>
-    <script>
-      function saveImage() {
-        // 이미지를 저장하는 코드 추가
-        alert('이미지를 저장합니다.');
-      }
-    </script>
+    
     <script>
       const btn_data7 = (document.getElementById("item7").onclick =
         function () {
