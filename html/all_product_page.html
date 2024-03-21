@@ -198,6 +198,220 @@
     });
     </script>
 
+    <!--==================== Login.html ====================-->
+<div class="home">
+  <div class="blur-background"></div>
+  <div class="form_container">
+    <i class="uil uil-times form_close"></i>
+    <!-- Login From -->
+    <div class="form login_form"  >
+      <form action="#" class="login-reset" id="form">
+        <h2>로그인</h2>
+  
+        <div class="input_box">
+          <input type="email" placeholder="이메일을 입력하세요" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" placeholder="비밀번호를 입력하세요" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+  
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">로그인 유지</label>
+          </span>
+          <a href="#" class="forgot_pw">비밀번호 찾기</a>
+        </div>
+  
+        <button type="reset" class="button logged-btn">로그인하기</button>
+  
+        <div class="login_signup">계정 없으신가요? <a href="#" id="signup">회원 가입</a></div>
+      </form>
+    </div>
+    <!-- Signup From -->
+    <div class="form signup_form">
+      <form action="#">
+        <h2>회원 가입</h2>
+  
+        <div class="input_box">
+          <input type="email" placeholder="이메일을 입력하기" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box" id="new-pw">
+          <input type="password" placeholder="새로운 비밀번호 만들기" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+        <div class="input_box" id="chk-pw">
+          <input type="password" placeholder="비밀번호 확인" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+        <button type="reset" class="button signed-in">회원 가입하기</button>
+        <div class="login_signup">이미 계정 있으신가요? <a href="#" id="login">로그인</a></div>
+      </form>
+    </div>
+  </div>
+</div>    
+<!--==================== Login script ====================-->
+<script>
+const formOpenlg = document.querySelector("#login_open"),
+formOpenBtn = document.querySelector("#form-open"),
+home = document.querySelector(".home"),
+formContainer = document.querySelector(".form_container"),
+formCloseBtn = document.querySelector(".form_close"),
+signupBtn = document.querySelector("#signup"),
+loginBtn = document.querySelector("#login"),
+pwShowHide = document.querySelectorAll(".pw_hide"),
+loggedBtn=document.querySelector(".logged-btn"),
+signedBtn=document.querySelector(".signed-in");
+
+
+console.log(formContainer);
+
+formOpenlg.addEventListener("click", () => home.classList.add("show"));
+formOpenBtn.addEventListener("click", () => home.classList.add("show"));
+formCloseBtn.addEventListener("click", () => home.classList.remove("show")); // x버튼
+
+pwShowHide.forEach((icon) => {
+icon.addEventListener("click", () => {
+let getPwInput = icon.parentElement.querySelector("input");
+if (getPwInput.type === "password") {
+getPwInput.type = "text";
+icon.classList.replace("uil-eye-slash", "uil-eye");
+} else {
+getPwInput.type = "password";
+icon.classList.replace("uil-eye", "uil-eye-slash");
+}
+});
+});
+loggedBtn.addEventListener("click",(e)=>{
+  alert("로그인에 성공하셨습니다!");
+  home.classList.remove("show");
+});
+signedBtn.addEventListener("click",(e)=>{
+  event.preventDefault();
+  var newPw = document.getElementById('new-pw').querySelector('input').value;
+  var chkPw = document.getElementById('chk-pw').querySelector('input').value;
+  if (newPw === chkPw) {
+    alert("회원 가입에 성공하셨습니다!");
+    home.classList.remove("show");
+  } else {
+    alert("설정한 비밀 번호와 비밀 번호 확인이 일치하지 않습니다.")
+  } 
+});
+signupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  formContainer.classList.add("active");
+});
+loginBtn.addEventListener("click", (e) => {
+formContainer.classList.remove("active");
+});
+
+</script>
+<!----------------- Login script ----------->
+    <!--==================== CART.html ====================-->
+    <div class="cart" id="cart">
+      <div action="" class="cart__form">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="300px"
+            fill="currentColor"
+            class="bi bi-cart2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+            />
+          </svg>
+        </div>
+        <span class="empty">장바구니가 비었어요.</span><br /><br />
+        <span
+          >장바구니를 새로운 상품으로<br />
+          채워보세요.</span
+        >
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30px"
+        fill="currentcolor"
+        class="bi bi-x cart__close"
+        id="cart-close"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+        ></path>
+      </svg>
+    </div>
+    <!-- /*=============== Cart script ===============*/ -->
+    <script>
+      const cart = document.getElementById("cart"),
+        cartop = document.getElementById("cart-open"),
+        cartBtn = document.getElementById("cart-btn"),
+        cartClose = document.getElementById("cart-close");
+
+      /* Cart show */
+      cartop.addEventListener("click", () => {
+        cart.classList.add("show-cart");
+      });
+      cartBtn.addEventListener("click", () => {
+        cart.classList.add("show-cart");
+      });
+
+      /* Cart hidden */
+      cartClose.addEventListener("click", () => {
+        cart.classList.remove("show-cart");
+      });
+    </script>
+    <!--==================== SEARCH html====================-->
+    <div class="search" id="search">
+      <form action="" class="search__form">
+        <input
+          type="search"
+          placeholder="검색어를 입력하세요..."
+          class="search__input"
+        />
+      </form>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30px"
+        fill="currentcolor"
+        class="bi bi-x search__close"
+        id="search-close"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+        />
+      </svg>
+    </div>
+    <!--==================== SEARCH script====================-->
+    <script>
+      const search = document.getElementById("search"),
+        searchop = document.getElementById("search-open"),
+        searchBtn = document.getElementById("search-btn"),
+        searchClose = document.getElementById("search-close");
+
+      /* Search show */
+      searchop.addEventListener("click", () => {
+        search.classList.add("show-search");
+      });
+      searchBtn.addEventListener("click", () => {
+        search.classList.add("show-search");
+      });
+
+      /* Search hidden */
+      searchClose.addEventListener("click", () => {
+        search.classList.remove("show-search");
+      });
+    </script>
+
     <!-- main -->
     <div class="container">
       <div id="modal">
@@ -861,218 +1075,5 @@
         </div>
       </div>
     </footer>
-<!--==================== Login.html ====================-->
-<div class="home">
-  <div class="blur-background"></div>
-  <div class="form_container">
-    <i class="uil uil-times form_close"></i>
-    <!-- Login From -->
-    <div class="form login_form"  >
-      <form action="#" class="login-reset" id="form">
-        <h2>로그인</h2>
-  
-        <div class="input_box">
-          <input type="email" placeholder="이메일을 입력하세요" required />
-          <i class="uil uil-envelope-alt email"></i>
-        </div>
-        <div class="input_box">
-          <input type="password" placeholder="비밀번호를 입력하세요" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-  
-        <div class="option_field">
-          <span class="checkbox">
-            <input type="checkbox" id="check" />
-            <label for="check">로그인 유지</label>
-          </span>
-          <a href="#" class="forgot_pw">비밀번호 찾기</a>
-        </div>
-  
-        <button type="reset" class="button logged-btn">로그인하기</button>
-  
-        <div class="login_signup">계정 없으신가요? <a href="#" id="signup">회원 가입</a></div>
-      </form>
-    </div>
-    <!-- Signup From -->
-    <div class="form signup_form">
-      <form action="#">
-        <h2>회원 가입</h2>
-  
-        <div class="input_box">
-          <input type="email" placeholder="이메일을 입력하기" required />
-          <i class="uil uil-envelope-alt email"></i>
-        </div>
-        <div class="input_box" id="new-pw">
-          <input type="password" placeholder="새로운 비밀번호 만들기" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-        <div class="input_box" id="chk-pw">
-          <input type="password" placeholder="비밀번호 확인" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-        <button type="reset" class="button signed-in">회원 가입하기</button>
-        <div class="login_signup">이미 계정 있으신가요? <a href="#" id="login">로그인</a></div>
-      </form>
-    </div>
-  </div>
-</div>    
-<!--==================== Login script ====================-->
-<script>
-const formOpenlg = document.querySelector("#login_open"),
-formOpenBtn = document.querySelector("#form-open"),
-home = document.querySelector(".home"),
-formContainer = document.querySelector(".form_container"),
-formCloseBtn = document.querySelector(".form_close"),
-signupBtn = document.querySelector("#signup"),
-loginBtn = document.querySelector("#login"),
-pwShowHide = document.querySelectorAll(".pw_hide"),
-loggedBtn=document.querySelector(".logged-btn"),
-signedBtn=document.querySelector(".signed-in");
-
-
-console.log(formContainer);
-
-formOpenlg.addEventListener("click", () => home.classList.add("show"));
-formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-formCloseBtn.addEventListener("click", () => home.classList.remove("show")); // x버튼
-
-pwShowHide.forEach((icon) => {
-icon.addEventListener("click", () => {
-let getPwInput = icon.parentElement.querySelector("input");
-if (getPwInput.type === "password") {
-getPwInput.type = "text";
-icon.classList.replace("uil-eye-slash", "uil-eye");
-} else {
-getPwInput.type = "password";
-icon.classList.replace("uil-eye", "uil-eye-slash");
-}
-});
-});
-loggedBtn.addEventListener("click",(e)=>{
-  alert("로그인에 성공하셨습니다!");
-  home.classList.remove("show");
-});
-signedBtn.addEventListener("click",(e)=>{
-  event.preventDefault();
-  var newPw = document.getElementById('new-pw').querySelector('input').value;
-  var chkPw = document.getElementById('chk-pw').querySelector('input').value;
-  if (newPw === chkPw) {
-    alert("회원 가입에 성공하셨습니다!");
-    home.classList.remove("show");
-  } else {
-    alert("설정한 비밀 번호와 비밀 번호 확인이 일치하지 않습니다.")
-  } 
-});
-signupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.add("active");
-});
-loginBtn.addEventListener("click", (e) => {
-formContainer.classList.remove("active");
-});
-
-</script>
-<!----------------- Login script ----------->
-    <!--==================== CART.html ====================-->
-    <div class="cart" id="cart">
-      <div action="" class="cart__form">
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="300px"
-            fill="currentColor"
-            class="bi bi-cart2"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-            />
-          </svg>
-        </div>
-        <span class="empty">장바구니가 비었어요.</span><br /><br />
-        <span
-          >장바구니를 새로운 상품으로<br />
-          채워보세요.</span
-        >
-      </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30px"
-        fill="currentcolor"
-        class="bi bi-x cart__close"
-        id="cart-close"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-        ></path>
-      </svg>
-    </div>
-    <!-- /*=============== Cart script ===============*/ -->
-    <script>
-      const cart = document.getElementById("cart"),
-        cartop = document.getElementById("cart-open"),
-        cartBtn = document.getElementById("cart-btn"),
-        cartClose = document.getElementById("cart-close");
-
-      /* Cart show */
-      cartop.addEventListener("click", () => {
-        cart.classList.add("show-cart");
-      });
-      cartBtn.addEventListener("click", () => {
-        cart.classList.add("show-cart");
-      });
-
-      /* Cart hidden */
-      cartClose.addEventListener("click", () => {
-        cart.classList.remove("show-cart");
-      });
-    </script>
-    <!--==================== SEARCH html====================-->
-    <div class="search" id="search">
-      <form action="" class="search__form">
-        <input
-          type="search"
-          placeholder="검색어를 입력하세요..."
-          class="search__input"
-        />
-      </form>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30px"
-        fill="currentcolor"
-        class="bi bi-x search__close"
-        id="search-close"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-        />
-      </svg>
-    </div>
-    <!--==================== SEARCH script====================-->
-    <script>
-      const search = document.getElementById("search"),
-        searchop = document.getElementById("search-open"),
-        searchBtn = document.getElementById("search-btn"),
-        searchClose = document.getElementById("search-close");
-
-      /* Search show */
-      searchop.addEventListener("click", () => {
-        search.classList.add("show-search");
-      });
-      searchBtn.addEventListener("click", () => {
-        search.classList.add("show-search");
-      });
-
-      /* Search hidden */
-      searchClose.addEventListener("click", () => {
-        search.classList.remove("show-search");
-      });
-    </script>
   </body>
 </html>
