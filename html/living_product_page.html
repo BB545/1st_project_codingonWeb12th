@@ -225,12 +225,87 @@
               </svg>
             </div>
             <div class="content">
-              <div class="swiper">
+              <div class="swiper" id="modal_1">
                 <div class="swiper-wrapper">
-                  <img class="swiper-slide" id="item__1" src="" />
-                  <img class="swiper-slide" id="item__2" src="" />
-                  <img class="swiper-slide" id="item__3" src="" />
-                  <img class="swiper-slide" id="item__4" src="" />
+                  <img class="swiper-slide" id="item__1" src="/product_img/item1_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item1_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item1_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item1_4.jpg" />
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <div class="material-icons"></div>
+                </div>
+                <div class="swiper-button-next">
+                  <div class="material-icons"></div>
+                </div>
+              </div>
+              <div class="swiper" id="modal_2">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" id="item__1" src="/product_img/item2_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item2_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item2_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item2_4.jpg" />
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <div class="material-icons"></div>
+                </div>
+                <div class="swiper-button-next">
+                  <div class="material-icons"></div>
+                </div>
+              </div>
+              <div class="swiper" id="modal_3">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" id="item__1" src="/product_img/item3_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item3_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item3_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item3_4.jpg" />
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <div class="material-icons"></div>
+                </div>
+                <div class="swiper-button-next">
+                  <div class="material-icons"></div>
+                </div>
+              </div>
+              <div class="swiper" id="modal_4">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" id="item__1" src="/product_img/item4_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item4_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item4_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item4_4.jpg" />
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <div class="material-icons"></div>
+                </div>
+                <div class="swiper-button-next">
+                  <div class="material-icons"></div>
+                </div>
+              </div>
+              <div class="swiper" id="modal_5">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" id="item__1" src="/product_img/item5_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item5_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item5_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item5_4.jpg" />
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <div class="material-icons"></div>
+                </div>
+                <div class="swiper-button-next">
+                  <div class="material-icons"></div>
+                </div>
+              </div>
+              <div class="swiper" id="modal_6">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" id="item__1" src="/product_img/item6_1.jpg" />
+                  <img class="swiper-slide" id="item__2" src="/product_img/item6_2.jpg" />
+                  <img class="swiper-slide" id="item__3" src="/product_img/item6_3.jpg" />
+                  <img class="swiper-slide" id="item__4" src="/product_img/item6_4.jpg" />
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev">
@@ -325,18 +400,16 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item1_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item1_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item1_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item1_4.jpg");
+          document.getElementById("modal_1").style.display = "block";
+          document.getElementById("modal_2").style.display = "none";
+          document.getElementById("modal_3").style.display = "none";
+          document.getElementById("modal_4").style.display = "none";
+          document.getElementById("modal_5").style.display = "none";
+          document.getElementById("modal_6").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
+
         });
       const btn_data2 = (document.getElementById("item2").onclick =
         function () {
@@ -366,18 +439,15 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item2_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item2_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item2_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item2_4.jpg");
+          document.getElementById("modal_2").style.display = "block";
+          document.getElementById("modal_1").style.display = "none";
+          document.getElementById("modal_3").style.display = "none";
+          document.getElementById("modal_4").style.display = "none";
+          document.getElementById("modal_5").style.display = "none";
+          document.getElementById("modal_6").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
         });
 
       const btn_data3 = (document.getElementById("item3").onclick =
@@ -408,18 +478,15 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item3_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item3_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item3_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item3_4.jpg");
+          document.getElementById("modal_3").style.display = "block";
+          document.getElementById("modal_2").style.display = "none";
+          document.getElementById("modal_1").style.display = "none";
+          document.getElementById("modal_4").style.display = "none";
+          document.getElementById("modal_5").style.display = "none";
+          document.getElementById("modal_6").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
         });
 
       const btn_data4 = (document.getElementById("item4").onclick =
@@ -450,18 +517,15 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item4_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item4_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item4_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item4_4.jpg");
+          document.getElementById("modal_4").style.display = "block";
+          document.getElementById("modal_2").style.display = "none";
+          document.getElementById("modal_3").style.display = "none";
+          document.getElementById("modal_1").style.display = "none";
+          document.getElementById("modal_5").style.display = "none";
+          document.getElementById("modal_6").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
         });
 
       const btn_data5 = (document.getElementById("item5").onclick =
@@ -492,18 +556,15 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item5_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item5_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item5_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item5_4.jpg");
+          document.getElementById("modal_5").style.display = "block";
+          document.getElementById("modal_2").style.display = "none";
+          document.getElementById("modal_3").style.display = "none";
+          document.getElementById("modal_4").style.display = "none";
+          document.getElementById("modal_1").style.display = "none";
+          document.getElementById("modal_6").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
         });
 
       const btn_data6 = (document.getElementById("item6").onclick =
@@ -534,18 +595,15 @@
             },
           });
           document.getElementById("modal").style.display = "block";
-          document
-            .getElementById("item__1")
-            .setAttribute("src", "/product_img/item6_1.jpg");
-          document
-            .getElementById("item__2")
-            .setAttribute("src", "/product_img/item6_2.jpg");
-          document
-            .getElementById("item__3")
-            .setAttribute("src", "/product_img/item6_3.jpg");
-          document
-            .getElementById("item__4")
-            .setAttribute("src", "/product_img/item6_4.jpg");
+          document.getElementById("modal_6").style.display = "block";
+          document.getElementById("modal_2").style.display = "none";
+          document.getElementById("modal_3").style.display = "none";
+          document.getElementById("modal_4").style.display = "none";
+          document.getElementById("modal_5").style.display = "none";
+          document.getElementById("modal_1").style.display = "none";
+          document.getElementById("modal_7").style.display = "none";
+          document.getElementById("modal_8").style.display = "none";
+          document.getElementById("modal_9").style.display = "none";
         });
 
       document.getElementById("modal_close_btn").onclick = function () {
