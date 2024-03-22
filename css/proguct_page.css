@@ -139,6 +139,39 @@ a.button {
   -webkit-transform: scale(2, 2);
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
 }
+.btnSave {
+  background: none;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.save_button {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btnSave:before {
+  content: "장바구니 추가";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.btnSave:before {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btnSave:hover:before {
+  margin-top: -2px;
+  margin-left: 0px;
+  transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
 
 @media screen and (max-width: 767px) {
   .container {
