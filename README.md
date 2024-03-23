@@ -13,8 +13,7 @@
   |||
   |---|---|
   |개발 언어|HTML, CSS, JavaScript|
-  |개발 환경|vscode, git, github|
-  |Tools|Figma, notion, vscode|
+  |Tools|Figma, notion, vscode, git, github|
   |배포 환경|node.js, netlify|
 
 
