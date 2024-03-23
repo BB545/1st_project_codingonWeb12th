@@ -27,10 +27,11 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
+  display: block;
   color: white;
   font-size: 2rem;
   opacity: 70%;
-  z-index: 100;
+  z-index: 10;
 }
 
 .swiper-button-prev {
