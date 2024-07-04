@@ -1,4 +1,4 @@
-<img src="https://github.com/BB545/1st_project_codingonWeb12th/blob/main/img_logo/logo.png" alt="스틸스" width="100">
+<img src="https://github.com/BB545/1st_project_codingonWeb12th/blob/main/img_logo/logo.png" alt="스틸스" width="150">
 
 # 1st_project_codingonWeb12th
 
